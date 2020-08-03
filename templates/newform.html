@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Test Your Heart Status</legend>
+            <div class="form-group">
+                {{ form.day.label(class="form-control-label") }} {{ form.day(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.month.label(class="form-control-label") }}
+                {{ form.month(class="form-control form-control-lg") }}</div>
+            <div class="form-group">
+                {{ form.year.label  (class="form-control-label")}}
+                {{ form.year  (class="form-control form-control-lg")}}</div>
+            <div class="form-group">
+                {{ form.gender.label  (class="form-control-label")}}
+                {{ form.gender  (class="form-control form-control-lg")}}</div>
+            <div class="form-group">
+                {{ form.height.label }} {{ form.height (class="form-control form-control-lg")}}</div>
+            <div class="form-group">
+                {{ form.weight.label  (class="form-control-label")}}
+                {{ form.weight  (class="form-control form-control-lg")}}</div>
+            <div class="form-group">
+                {{ form.systolicbloodpressure.label  (class="form-control-label")}}
+                {{ form.systolicbloodpressure (class="form-control form-control-lg") }}</div>
+            <div class="form-group">
+                {{ form.diastolicbloodpressure.label  (class="form-control-label")}}
+                {{ form.diastolicbloodpressure  (class="form-control form-control-lg")}}</div>
+            <div class="form-group">
+                {{ form.cholesterol.label (class="form-control-label") }}
+                {{ form.cholesterol (class="form-control form-control-lg") }}</div>
+            <div class="form-group">
+                {{ form.gluc.label  (class="form-control-label")}}
+                {{ form.gluc (class="form-control form-control-lg") }}</div>
+            <div class="form-group">
+                {{ form.smoke.label  (class="form-control-label")}}
+                {{ form.smoke  (class="form-control form-control-lg")}}</div>
+            <div class="form-group">
+                {{ form.alco.label  (class="form-control-label")}}
+                {{ form.alco  (class="form-control form-control-lg")}}</div>
+            <div class="form-group">
+                {{ form.active.label  (class="form-control-label")}}
+                {{ form.active  (class="form-control form-control-lg")}}</div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </fieldset>
+    </form>
+</div>
+<div class="border-top pt-3">
+    <small class="text-muted">
+        Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+    </small>
+</div>
+{% endblock content %}
